@@ -52,7 +52,7 @@
   </scm>
 
   <properties>
-      <jackson.version>2.21.4</jackson.version>
+      <jackson.version>2.22.0</jackson.version>
       <snakeyaml.version>2.6</snakeyaml.version>
   </properties>
   
