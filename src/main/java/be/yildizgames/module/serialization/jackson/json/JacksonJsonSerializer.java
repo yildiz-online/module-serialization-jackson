@@ -19,12 +19,14 @@ package be.yildizgames.module.serialization.jackson.json;
 import be.yildizgames.module.serialization.Serializer;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import static com.fasterxml.jackson.databind.DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES;
+
 /**
  * @author Grégory Van den Borre
  */
 public class JacksonJsonSerializer implements Serializer<String> {
 
-     private final ObjectMapper mapper = new ObjectMapper();
+     private final ObjectMapper mapper = new ObjectMapper().configure(FAIL_ON_UNKNOWN_PROPERTIES, false);
 
     public JacksonJsonSerializer() {
         super();
